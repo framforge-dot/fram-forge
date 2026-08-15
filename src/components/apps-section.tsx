@@ -12,18 +12,48 @@ export function AppsSection() {
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.05),transparent_60%)]" />
       <Container className="relative">
-        <SectionHeading
-          id="apps-heading"
-          eyebrow="Apps"
-          title="Products in the fire."
-          description="A few of the things we are building and shipping. Names and links here are placeholders—swap them as products go live."
-        />
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
-          {apps.map((app) => (
-            <AppCard key={app.name} app={app} />
-          ))}
-        </div>
+        {apps.length > 0 ? (
+          <>
+            <SectionHeading
+              id="apps-heading"
+              eyebrow="Apps"
+              title="What we’re making."
+              description="Independent products designed, built, and operated by Fram Forge."
+            />
+            <div className="mt-14 grid gap-4 md:grid-cols-3">
+              {apps.map((app) => (
+                <AppCard key={app.name} app={app} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <ComingSoon />
+        )}
       </Container>
     </section>
+  );
+}
+
+function ComingSoon() {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-line bg-ink px-6 py-20 text-center sm:px-12 sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.04] blur-3xl" />
+      <div className="relative mx-auto max-w-xl">
+        <p className="font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-mist">
+          Apps
+        </p>
+        <h2
+          id="apps-heading"
+          className="font-display mt-4 text-4xl font-semibold tracking-tight text-paper sm:text-5xl"
+        >
+          Coming soon
+        </h2>
+        <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-mist sm:text-lg">
+          The first Fram Forge apps are in the fire. This space will hold them
+          when they are ready to share.
+        </p>
+      </div>
+    </div>
   );
 }

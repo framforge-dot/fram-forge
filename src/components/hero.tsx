@@ -30,11 +30,11 @@ export function Hero() {
             {site.description}
           </p>
           <div className="animate-fade-up delay-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <ButtonLink href="#apps">
+            <ButtonLink href="/#apps">
               Explore our apps
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
-            <ButtonLink href="#contact" variant="secondary">
+            <ButtonLink href="/#contact" variant="secondary">
               Get in touch
             </ButtonLink>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { Container } from "@/components/container";
@@ -43,8 +44,8 @@ export function SiteHeader() {
       )}
     >
       <Container className="flex h-16 items-center justify-between sm:h-[4.25rem]">
-        <a
-          href="#home"
+        <Link
+          href="/"
           className="flex items-center gap-2.5 rounded-lg text-paper"
           aria-label={`${site.name} home`}
           onClick={() => setOpen(false)}
@@ -53,19 +54,19 @@ export function SiteHeader() {
           <span className="font-display text-[1.05rem] font-semibold tracking-tight">
             {site.name}
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm text-mist transition-colors hover:text-paper"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <ButtonLink href="#contact" className="px-4 py-2 text-[0.8rem]">
+          <ButtonLink href="/#contact" className="px-4 py-2 text-[0.8rem]">
             Get in touch
           </ButtonLink>
         </nav>
@@ -89,16 +90,16 @@ export function SiteHeader() {
       >
         <Container className="flex flex-col gap-1 py-5">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="rounded-xl px-3 py-3 text-lg text-paper"
               onClick={() => setOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <ButtonLink href="#contact" className="mt-3" onClick={() => setOpen(false)}>
+          <ButtonLink href="/#contact" className="mt-3" onClick={() => setOpen(false)}>
             Get in touch
           </ButtonLink>
         </Container>

@@ -2,7 +2,7 @@
  * Site content and placeholders.
  *
  * Replace the values marked REPLACE before launch:
- * - app names, descriptions, and store / web links
+ * - app entries in the `apps` array
  * - contact email
  * - social profile URLs
  */
@@ -21,11 +21,19 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Home", href: "#home" },
-  { label: "Apps", href: "#apps" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Apps", href: "/#apps" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
+
+export const legal = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+] as const;
+
+/** Last updated date shown on legal pages. */
+export const legalUpdated = "August 14, 2026";
 
 export const capabilities = [
   {
@@ -69,32 +77,8 @@ export type AppProduct = {
   tone: AppTone;
 };
 
-export const apps: AppProduct[] = [
-  {
-    name: "Keel",
-    category: "Daily navigation",
-    description:
-      "A calm companion for the day’s work. Keel keeps the next right thing in view so the rest of the noise can wait.",
-    href: "#contact",
-    tone: "high",
-  },
-  {
-    name: "Lumen",
-    category: "Notes & capture",
-    description:
-      "Catch thoughts at the speed they arrive. Lumen is a lightweight space for notes that actually get revisited.",
-    href: "#contact",
-    tone: "mid",
-  },
-  {
-    name: "Rivermill",
-    category: "New product",
-    description:
-      "A new Fram Forge product currently in the fire. Shape still forming. Details when it is ready to share.",
-    comingSoon: true,
-    tone: "low",
-  },
-];
+/** Add products here when they are ready to show on the homepage. */
+export const apps: AppProduct[] = [];
 
 export const processSteps = [
   "Idea",
