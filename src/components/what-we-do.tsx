@@ -26,10 +26,10 @@ export function WhatWeDo() {
             return (
               <li
                 key={item.title}
-                className="group rounded-3xl border border-line bg-steel/40 p-6 transition-colors duration-200 hover:border-ember/30 hover:bg-steel/70 sm:p-8"
+                className="group rounded-3xl border border-line bg-steel/40 p-6 transition-colors duration-200 hover:border-paper/25 hover:bg-steel/70 sm:p-8"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-line bg-ink text-ember-bright">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-line bg-ink text-paper">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <span className="font-mono text-xs text-ash">{item.number}</span>

@@ -10,7 +10,7 @@ export function AppsSection() {
       aria-labelledby="apps-heading"
       className="relative border-t border-line py-20 sm:py-28"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(232,160,106,0.08),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.05),transparent_60%)]" />
       <Container className="relative">
         <SectionHeading
           id="apps-heading"

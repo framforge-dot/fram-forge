@@ -21,9 +21,9 @@ export function Contact() {
           />
           <a
             href={`mailto:${site.email}`}
-            className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-line bg-steel/50 px-4 py-3 text-sm text-paper transition-colors hover:border-ember/40"
+            className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-line bg-steel/50 px-4 py-3 text-sm text-paper transition-colors hover:border-paper/40"
           >
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-ember-bright">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-paper">
               <Mail className="h-4 w-4" aria-hidden />
             </span>
             {/* REPLACE: contact email in src/lib/site.ts */}

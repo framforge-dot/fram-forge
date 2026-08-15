@@ -16,10 +16,9 @@ export function ButtonLink({
   onClick,
 }: ButtonLinkProps) {
   const styles = {
-    primary:
-      "bg-ember text-obsidian hover:bg-ember-bright shadow-[0_0_32px_-8px_rgba(232,160,106,0.7)]",
+    primary: "bg-paper text-obsidian hover:bg-mist",
     secondary:
-      "border border-line bg-transparent text-paper hover:border-ember/50 hover:bg-white/[0.03]",
+      "border border-line bg-transparent text-paper hover:border-paper/40 hover:bg-white/[0.04]",
     ghost: "text-mist hover:text-paper",
   } as const;
 

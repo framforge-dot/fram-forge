@@ -1,17 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --obsidian: #07070b;
-  --ink: #0c0c12;
-  --steel: #14141c;
-  --line: rgba(245, 241, 234, 0.1);
-  --ember: #e8a06a;
-  --ember-bright: #f4c49a;
-  --moss: #7dcaa8;
-  --violet: #b7a4e8;
-  --paper: #f5f1ea;
-  --mist: #c6c0b6;
-  --ash: #8f8a82;
+  --obsidian: #000000;
+  --ink: #0a0a0a;
+  --steel: #111111;
+  --line: rgba(255, 255, 255, 0.12);
+  --paper: #ffffff;
+  --mist: #a3a3a3;
+  --ash: #737373;
 }
 
 @theme inline {
@@ -19,10 +15,6 @@
   --color-ink: var(--ink);
   --color-steel: var(--steel);
   --color-line: var(--line);
-  --color-ember: var(--ember);
-  --color-ember-bright: var(--ember-bright);
-  --color-moss: var(--moss);
-  --color-violet: var(--violet);
   --color-paper: var(--paper);
   --color-mist: var(--mist);
   --color-ash: var(--ash);
@@ -44,12 +36,12 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--ember) 40%, transparent);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--obsidian);
 }
 
 :focus-visible {
-  outline: 2px solid var(--ember-bright);
+  outline: 2px solid var(--paper);
   outline-offset: 3px;
 }
 
@@ -67,8 +59,8 @@ textarea:-webkit-autofill {
 
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(245, 241, 234, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(245, 241, 234, 0.045) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 20%, transparent 75%);
 }
@@ -78,7 +70,7 @@ textarea:-webkit-autofill {
   position: fixed;
   inset: 0;
   z-index: 80;
-  opacity: 0.035;
+  opacity: 0.028;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -97,12 +89,12 @@ textarea:-webkit-autofill {
 @keyframes glow-pulse {
   0%,
   100% {
-    opacity: 0.45;
+    opacity: 0.35;
     transform: scale(1);
   }
   50% {
-    opacity: 0.85;
-    transform: scale(1.06);
+    opacity: 0.7;
+    transform: scale(1.05);
   }
 }
 
@@ -112,15 +104,6 @@ textarea:-webkit-autofill {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: -100% 0;
   }
 }
 

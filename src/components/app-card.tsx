@@ -2,30 +2,18 @@ import { ArrowUpRight } from "lucide-react";
 import type { AppProduct } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
-const accents = {
-  ember: {
-    glow: "from-ember/20",
-    chip: "text-ember-bright",
-    shape: "#e8a06a",
-  },
-  moss: {
-    glow: "from-moss/20",
-    chip: "text-moss",
-    shape: "#7dcaa8",
-  },
-  violet: {
-    glow: "from-violet/20",
-    chip: "text-violet",
-    shape: "#b7a4e8",
-  },
+const tones = {
+  high: { glow: "from-white/12", shape: "#ffffff" },
+  mid: { glow: "from-white/8", shape: "#d4d4d4" },
+  low: { glow: "from-white/4", shape: "#a3a3a3" },
 } as const;
 
-function CardArt({ accent }: { accent: AppProduct["accent"] }) {
-  const color = accents[accent].shape;
+function CardArt({ tone }: { tone: AppProduct["tone"] }) {
+  const color = tones[tone].shape;
   return (
     <svg viewBox="0 0 320 140" className="h-full w-full" aria-hidden="true">
       <rect width="320" height="140" fill="transparent" />
-      <circle cx="250" cy="30" r="54" fill={color} opacity="0.16" />
+      <circle cx="250" cy="30" r="54" fill={color} opacity="0.14" />
       <rect
         x="28"
         y="34"
@@ -36,31 +24,31 @@ function CardArt({ accent }: { accent: AppProduct["accent"] }) {
         stroke={color}
         strokeWidth="1.4"
       />
-      <rect x="42" y="48" width="40" height="8" rx="4" fill={color} opacity="0.85" />
+      <rect x="42" y="48" width="40" height="8" rx="4" fill={color} opacity="0.9" />
       <rect x="42" y="64" width="64" height="6" rx="3" fill={color} opacity="0.35" />
-      <rect x="42" y="78" width="52" height="6" rx="3" fill={color} opacity="0.22" />
+      <rect x="42" y="78" width="52" height="6" rx="3" fill={color} opacity="0.2" />
     </svg>
   );
 }
 
 export function AppCard({ app }: { app: AppProduct }) {
-  const palette = accents[app.accent];
+  const palette = tones[app.tone];
   const inner = (
     <>
       <div
         className={cn(
-          "relative h-36 overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br to-transparent",
+          "relative h-36 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br to-transparent",
           palette.glow,
         )}
       >
-        <CardArt accent={app.accent} />
+        <CardArt tone={app.tone} />
         {app.comingSoon ? (
-          <span className="absolute right-3 top-3 rounded-full border border-violet/40 bg-obsidian/80 px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-violet">
+          <span className="absolute right-3 top-3 rounded-full border border-white/20 bg-obsidian/80 px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-paper">
             Coming Soon
           </span>
         ) : null}
       </div>
-      <p className={cn("mt-5 font-mono text-[0.68rem] uppercase tracking-[0.18em]", palette.chip)}>
+      <p className="mt-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ash">
         {app.category}
       </p>
       <div className="mt-2 flex items-start justify-between gap-3">
@@ -79,7 +67,7 @@ export function AppCard({ app }: { app: AppProduct }) {
   );
 
   const className = cn(
-    "group flex h-full flex-col rounded-3xl border border-line bg-ink/80 p-4 transition-colors duration-200 hover:border-ember/35 hover:bg-steel/60 sm:p-5",
+    "group flex h-full flex-col rounded-3xl border border-line bg-ink p-4 transition-colors duration-200 hover:border-paper/25 hover:bg-steel sm:p-5",
     !app.comingSoon && "motion-safe:transition-transform motion-safe:hover:-translate-y-1",
   );
 

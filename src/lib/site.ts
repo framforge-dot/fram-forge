@@ -54,7 +54,7 @@ export const capabilities = [
   },
 ] as const;
 
-export type AppAccent = "ember" | "moss" | "violet";
+export type AppTone = "high" | "mid" | "low";
 
 export type AppProduct = {
   /** REPLACE: public product name */
@@ -66,7 +66,7 @@ export type AppProduct = {
   /** REPLACE: App Store, Play Store, or product URL. Leave undefined if unreleased. */
   href?: string;
   comingSoon?: boolean;
-  accent: AppAccent;
+  tone: AppTone;
 };
 
 export const apps: AppProduct[] = [
@@ -76,7 +76,7 @@ export const apps: AppProduct[] = [
     description:
       "A calm companion for the day’s work. Keel keeps the next right thing in view so the rest of the noise can wait.",
     href: "#contact",
-    accent: "moss",
+    tone: "high",
   },
   {
     name: "Lumen",
@@ -84,7 +84,7 @@ export const apps: AppProduct[] = [
     description:
       "Catch thoughts at the speed they arrive. Lumen is a lightweight space for notes that actually get revisited.",
     href: "#contact",
-    accent: "ember",
+    tone: "mid",
   },
   {
     name: "Rivermill",
@@ -92,7 +92,7 @@ export const apps: AppProduct[] = [
     description:
       "A new Fram Forge product currently in the fire. Shape still forming. Details when it is ready to share.",
     comingSoon: true,
-    accent: "violet",
+    tone: "low",
   },
 ];
 

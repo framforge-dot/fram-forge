@@ -20,7 +20,7 @@ export function SectionHeading({
         align === "center" && "mx-auto text-center",
       )}
     >
-      <p className="font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-ember-bright">
+      <p className="font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-mist">
         {eyebrow}
       </p>
       <h2

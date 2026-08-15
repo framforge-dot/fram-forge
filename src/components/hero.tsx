@@ -12,12 +12,12 @@ export function Hero() {
       className="relative overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0 bg-grid" />
-      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-moss/10 blur-3xl animate-glow" />
-      <div className="pointer-events-none absolute -right-16 top-0 h-[28rem] w-[28rem] rounded-full bg-ember/15 blur-3xl animate-glow" />
+      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-white/[0.04] blur-3xl animate-glow" />
+      <div className="pointer-events-none absolute -right-16 top-0 h-[28rem] w-[28rem] rounded-full bg-white/[0.06] blur-3xl animate-glow" />
 
       <Container className="relative grid min-h-[calc(100vh-4.25rem)] items-center gap-14 py-20 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-8">
         <div>
-          <p className="animate-fade-up font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-ember-bright">
+          <p className="animate-fade-up font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-mist">
             Independent app studio
           </p>
           <h1

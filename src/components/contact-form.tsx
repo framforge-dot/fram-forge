@@ -43,11 +43,11 @@ export function ContactForm() {
     return (
       <p
         role="status"
-        className="rounded-3xl border border-moss/30 bg-moss/10 px-6 py-8 text-sm leading-relaxed text-paper"
+        className="rounded-3xl border border-line bg-steel/40 px-6 py-8 text-sm leading-relaxed text-paper"
       >
         Thanks. Your email app should open with the message. If it does not, write us
         directly at{" "}
-        <a className="text-ember-bright underline-offset-2 hover:underline" href={`mailto:${site.email}`}>
+        <a className="text-paper underline-offset-2 hover:underline" href={`mailto:${site.email}`}>
           {site.email}
         </a>
         .
@@ -69,13 +69,13 @@ export function ContactForm() {
       </div>
       <Field id="message" name="message" label="Message" multiline />
       {status === "error" ? (
-        <p role="alert" className="text-sm text-ember-bright">
+        <p role="alert" className="text-sm text-paper">
           {error}
         </p>
       ) : null}
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center rounded-full bg-ember px-5 py-3 text-sm font-medium text-obsidian transition-colors hover:bg-ember-bright sm:w-auto"
+        className="inline-flex w-full items-center justify-center rounded-full bg-paper px-5 py-3 text-sm font-medium text-obsidian transition-colors hover:bg-mist sm:w-auto"
       >
         Send message
       </button>
@@ -99,7 +99,7 @@ function Field({
   multiline?: boolean;
 }) {
   const className =
-    "mt-2 w-full rounded-2xl border border-line bg-obsidian/60 px-4 py-3 text-sm text-paper placeholder:text-ash/80 transition-colors focus:border-ember/50";
+    "mt-2 w-full rounded-2xl border border-line bg-obsidian px-4 py-3 text-sm text-paper placeholder:text-ash/80 transition-colors focus:border-paper/40";
 
   return (
     <div>
