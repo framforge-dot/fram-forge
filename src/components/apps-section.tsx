@@ -1,3 +1,4 @@
+import { BrandLockup } from "@/components/brand";
 import { AppCard } from "@/components/app-card";
 import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
@@ -39,17 +40,15 @@ function ComingSoon() {
     <div className="relative overflow-hidden rounded-[2rem] border border-line bg-ink px-6 py-20 text-center sm:px-12 sm:py-28">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.04] blur-3xl" />
-      <div className="relative mx-auto max-w-xl">
-        <p className="font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-mist">
-          Apps
-        </p>
+      <div className="relative mx-auto max-w-sm">
+        <BrandLockup className="mx-auto w-[min(100%,18rem)]" />
         <h2
           id="apps-heading"
-          className="font-display mt-4 text-4xl font-semibold tracking-tight text-paper sm:text-5xl"
+          className="font-display mt-10 text-3xl font-semibold tracking-tight text-paper sm:text-4xl"
         >
           Coming soon
         </h2>
-        <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-mist sm:text-lg">
+        <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-mist">
           The first Fram Forge apps are in the fire. This space will hold them
           when they are ready to share.
         </p>

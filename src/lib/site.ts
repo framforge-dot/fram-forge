@@ -2,9 +2,7 @@
  * Site content and placeholders.
  *
  * Replace the values marked REPLACE before launch:
- * - app entries in the `apps` array
  * - contact email
- * - social profile URLs
  */
 
 export const site = {
@@ -88,9 +86,5 @@ export const processSteps = [
   "Improve",
 ] as const;
 
-/** REPLACE: social profile URLs */
-export const social = [
-  { label: "X", href: "https://x.com/yourhandle" },
-  { label: "Instagram", href: "https://instagram.com/yourhandle" },
-  { label: "GitHub", href: "https://github.com/yourhandle" },
-] as const;
+/** Add social profile URLs here when they are ready to show. */
+export const social: { label: string; href: string }[] = [];

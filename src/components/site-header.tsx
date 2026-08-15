@@ -3,9 +3,9 @@
 import { useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { BrandMark } from "@/components/brand";
 import { ButtonLink } from "@/components/button-link";
 import { Container } from "@/components/container";
-import { ForgeMark } from "@/components/forge-mark";
 import { cn } from "@/lib/cn";
 import { nav, site } from "@/lib/site";
 
@@ -46,11 +46,11 @@ export function SiteHeader() {
       <Container className="flex h-16 items-center justify-between sm:h-[4.25rem]">
         <Link
           href="/"
-          className="flex items-center gap-2.5 rounded-lg text-paper"
+          className="flex items-center gap-3 rounded-lg text-paper"
           aria-label={`${site.name} home`}
           onClick={() => setOpen(false)}
         >
-          <ForgeMark className="h-8 w-8" />
+          <BrandMark priority className="h-7 w-auto sm:h-8" />
           <span className="font-display text-[1.05rem] font-semibold tracking-tight">
             {site.name}
           </span>

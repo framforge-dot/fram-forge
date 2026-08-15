@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function HeroVisual() {
   return (
     <div
@@ -36,15 +38,6 @@ export function HeroVisual() {
             stroke="rgba(255,255,255,0.12)"
             strokeWidth="1"
           />
-          <circle
-            cx="200"
-            cy="200"
-            r="42"
-            fill="rgba(255,255,255,0.06)"
-            stroke="#ffffff"
-            strokeWidth="1.25"
-          />
-          <rect x="188" y="188" width="24" height="24" rx="5" fill="#ffffff" />
           <path
             d="M70 70h36M70 70v36M330 70h-36M330 70v36M70 330h36M70 330v-36M330 330h-36M330 330v-36"
             stroke="rgba(255,255,255,0.28)"
@@ -52,6 +45,17 @@ export function HeroVisual() {
             strokeLinecap="round"
           />
         </svg>
+
+        <div className="absolute inset-0 flex items-center justify-center pb-16">
+          <Image
+            src="/brand/mark.png"
+            alt=""
+            width={429}
+            height={370}
+            className="h-28 w-auto sm:h-32"
+            priority
+          />
+        </div>
 
         <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-obsidian/80 p-4 backdrop-blur-md">
           <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ash">

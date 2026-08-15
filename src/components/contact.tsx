@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
-import { site, social } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function Contact() {
   return (
@@ -29,20 +29,6 @@ export function Contact() {
             {/* REPLACE: contact email in src/lib/site.ts */}
             {site.email}
           </a>
-          <ul className="mt-6 flex flex-wrap gap-4">
-            {social.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="text-sm text-mist transition-colors hover:text-paper"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
         <ContactForm />
       </Container>
