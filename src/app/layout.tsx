@@ -1,3 +1,5 @@
+import { ClerkProvider } from "@clerk/nextjs";
+import { accountsConfigured } from "@/lib/auth";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import { SiteFooter } from "@/components/site-footer";
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
+  const document = (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
@@ -59,4 +61,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </body>
     </html>
   );
+  return accountsConfigured() ? (
+    <ClerkProvider signInUrl="/sign-in" signUpUrl="/sign-up" signInFallbackRedirectUrl="/billing" signUpFallbackRedirectUrl="/billing" afterSignOutUrl="/" appearance={{ variables: { colorPrimary: "#ffffff", colorPrimaryForeground: "#000000", colorBackground: "#111111", colorForeground: "#ffffff", colorMutedForeground: "#a3a3a3", borderRadius: "1rem" } }}>
+      {document}
+    </ClerkProvider>
+  ) : document;
 }

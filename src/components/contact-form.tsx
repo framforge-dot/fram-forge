@@ -77,7 +77,7 @@ export function ContactForm() {
         type="submit"
         className="inline-flex w-full items-center justify-center rounded-full bg-paper px-5 py-3 text-sm font-medium text-obsidian transition-colors hover:bg-mist sm:w-auto"
       >
-        Send message
+        Open email draft
       </button>
     </form>
   );
@@ -112,7 +112,7 @@ function Field({
           name={name}
           rows={5}
           required
-          placeholder="What are you working on?"
+          placeholder="Tell us about your business, your website goals, and your ideal timeline."
           className={`${className} resize-y`}
         />
       ) : (

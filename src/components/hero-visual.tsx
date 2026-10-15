@@ -1,69 +1,27 @@
-import Image from "next/image";
+import { ArrowUpRight, Check, MousePointer2 } from "lucide-react";
 
 export function HeroVisual() {
   return (
-    <div
-      className="animate-fade-up delay-4 relative mx-auto w-full max-w-md lg:max-w-none"
-      aria-hidden="true"
-    >
-      <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-line bg-steel shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent_42%),radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.04),transparent_40%)]" />
-        <div className="absolute inset-6 rounded-[1.4rem] border border-white/10" />
-
-        <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full">
-          <defs>
-            <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
-              <stop offset="55%" stopColor="#ffffff" stopOpacity="0.28" />
-              <stop offset="100%" stopColor="#ffffff" stopOpacity="0.08" />
-            </linearGradient>
-          </defs>
-          <g className="origin-center animate-orbit" style={{ transformOrigin: "200px 200px" }}>
-            <circle
-              cx="200"
-              cy="200"
-              r="118"
-              fill="none"
-              stroke="url(#ring)"
-              strokeWidth="1.25"
-              strokeDasharray="18 10"
-            />
-            <circle cx="200" cy="82" r="4" fill="#ffffff" />
-          </g>
-          <circle
-            cx="200"
-            cy="200"
-            r="78"
-            fill="none"
-            stroke="rgba(255,255,255,0.12)"
-            strokeWidth="1"
-          />
-          <path
-            d="M70 70h36M70 70v36M330 70h-36M330 70v36M70 330h36M70 330v-36M330 330h-36M330 330v-36"
-            stroke="rgba(255,255,255,0.28)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-
-        <div className="absolute inset-0 flex items-center justify-center pb-16">
-          <Image
-            src="/brand/mark.png"
-            alt=""
-            width={429}
-            height={370}
-            className="h-28 w-auto sm:h-32"
-            priority
-          />
+    <div className="animate-fade-up delay-4 relative mx-auto w-full max-w-lg py-8" aria-hidden="true">
+      <div className="overflow-hidden rounded-2xl border border-paper/20 bg-ink shadow-[0_30px_100px_-30px_rgba(255,255,255,0.12)] lg:-rotate-2">
+        <div className="flex items-center gap-1.5 border-b border-line px-5 py-4">
+          {[1,2,3].map(i => <span key={i} className="h-2 w-2 rounded-full bg-paper/25" />)}
+          <span className="ml-5 font-mono text-[10px] text-mist">YOUR BUSINESS, ONLINE</span>
         </div>
-
-        <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-obsidian/80 p-4 backdrop-blur-md">
-          <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ash">
-            Product frame
-          </p>
-          <p className="mt-1 text-sm text-paper">Idea in. App out. Keep shaping.</p>
+        <div className="p-6 sm:p-9">
+          <div className="flex items-center justify-between"><span className="h-2.5 w-20 rounded-full bg-paper" /><span className="h-2 w-14 rounded-full bg-paper/20" /></div>
+          <div className="mt-10 inline-flex rounded-full border border-line px-3 py-1 font-mono text-[9px] uppercase tracking-widest text-mist">Made for what’s next</div>
+          <p className="font-display mt-4 max-w-[10ch] text-4xl font-semibold leading-tight sm:text-5xl">Big ideas.<br />Real presence.</p>
+          <div className="mt-5 space-y-2"><div className="h-1.5 w-4/5 rounded bg-paper/20" /><div className="h-1.5 w-3/5 rounded bg-paper/15" /></div>
+          <div className="mt-7 inline-flex items-center gap-8 rounded-full bg-paper px-5 py-3 text-xs font-medium text-obsidian">Let’s get started <ArrowUpRight className="h-4 w-4" /></div>
+          <div className="mt-9 grid grid-cols-3 gap-3">{["Thoughtful design", "Built for mobile", "Ready to grow"].map((item, i) => <div key={item} className="rounded-xl border border-line bg-steel p-3"><span className="font-mono text-[10px] text-ash">0{i+1}</span><p className="mt-4 text-[10px] leading-relaxed text-mist">{item}</p></div>)}</div>
         </div>
       </div>
+      <div className="absolute -bottom-1 right-0 flex items-center gap-3 rounded-2xl border border-paper/20 bg-steel px-5 py-4 shadow-xl sm:-right-4">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-paper text-obsidian"><Check className="h-4 w-4" /></span>
+        <div><p className="text-sm font-medium">Built. Launched. Supported.</p><p className="mt-1 text-xs text-mist">Your next chapter starts here.</p></div>
+      </div>
+      <MousePointer2 className="absolute right-12 top-1 h-7 w-7 fill-paper text-paper" />
     </div>
   );
 }

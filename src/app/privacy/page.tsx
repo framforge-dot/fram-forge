@@ -25,8 +25,8 @@ export default function PrivacyPage() {
 
       <LegalSection title="Who we are">
         <p>
-          Fram Forge LLC is an independent app studio. We design, build, launch,
-          and operate our own apps and digital products.
+          Fram Forge LLC designs and builds business websites and provides
+          ongoing website support.
         </p>
         <p>
           Questions about privacy can be sent to{" "}
@@ -51,8 +51,38 @@ export default function PrivacyPage() {
           </li>
         </ul>
         <p>
-          We do not currently require an account to use this website, and we do
-          not ask for payment information here.
+          You must create an account and verify your email to view your proposal
+          and pay. Clerk manages registration, authentication, and account
+          security. Payment details
+          are collected on Stripe’s hosted checkout and customer portal. We do
+          not receive or store your full card number on this website.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Client accounts">
+        <p>
+          Clerk processes account information, including your email address,
+          credentials, verification activity, and session data. We use your
+          verified email to assign proposals and your account ID to connect
+          your billing records. We do not store your password ourselves. See{' '}
+          <a href="https://clerk.com/legal/privacy">Clerk’s privacy policy</a>.
+          Authentication uses cookies and similar technologies to keep you signed in.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Payments and proposal links">
+        <p>
+          Stripe processes payment and billing information, including your contact
+          details and payment method. We can access billing records such as your
+          name, email, payment status, invoices, and subscription details through
+          Stripe to provide services and handle billing questions. See{' '}
+          <a href="https://stripe.com/privacy">Stripe’s privacy policy</a> for
+          information about its processing.
+        </p>
+        <p>
+          Client proposals require sign-in and a verified email matching the
+          recipient. Your billing account is linked to your user ID so other
+          clients cannot access your subscription through your proposal link.
         </p>
       </LegalSection>
 
@@ -60,6 +90,7 @@ export default function PrivacyPage() {
         <p>We use information to:</p>
         <ul>
           <li>Respond to inquiries and operate the studio</li>
+          <li>Provide website services, manage subscriptions, and reconcile payments</li>
           <li>Host, maintain, and improve this website</li>
           <li>Protect against abuse, spam, and security incidents</li>
           <li>Comply with law and enforce our terms</li>

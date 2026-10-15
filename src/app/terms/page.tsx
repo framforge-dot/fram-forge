@@ -25,11 +25,30 @@ export default function TermsPage() {
 
       <LegalSection title="The studio">
         <p>
-          Fram Forge LLC is an independent app studio. We design, build, launch,
-          and operate our own apps and digital products. This website is our
-          public home on the web. It is not a client-services marketplace, and
-          nothing here is an offer to perform work for hire unless we say so in
-          a separate written agreement.
+          Fram Forge LLC designs and builds websites for businesses and offers
+          ongoing support through monthly retainers. Your individual proposal
+          defines the deliverables, timing, support limits, and project terms.
+          Review and resolve any questions about that proposal before paying.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Website payments and retainers">
+        <p>
+          Each custom offer lists a one-time website price and a recurring monthly
+          retainer in U.S. dollars. The first payment includes both the website
+          price and the first month of support. The retainer begins at checkout
+          and renews monthly until canceled under your agreed proposal terms.
+          Your final total is displayed before payment.
+        </p>
+        <p>
+          Payments and subscriptions are processed by Stripe. Create an account
+          with your assigned email and keep your sign-in credentials secure.
+          Use My account to view your subscription, update payment details,
+          or open Stripe’s cancellation confirmation. Cancellation timing
+          is shown before you confirm. You can also contact us for help.
+          Your proposal must specify cancellation, refund, and support terms;
+          contact us before paying if those details are missing or unclear.
+          A payment does not include work outside the agreed scope.
         </p>
       </LegalSection>
 

@@ -13,8 +13,8 @@ export function About() {
         <SectionHeading
           id="about-heading"
           eyebrow="About"
-          title="Built to make useful things."
-          description="Fram Forge LLC is an independent app studio. We take products from a spark of an idea through design, engineering, and launch—then stay with them. Shipping is not the end of the work. We keep shaping, measuring, and improving so our apps remain worth opening."
+          title="A small studio. A direct connection."
+          description="Fram Forge LLC builds websites for people building businesses. We keep the process personal and the scope clear, so you know what you are paying for and who to talk to. When your site goes live, we can stay alongside you with a monthly support plan."
         />
 
         <ol className="relative overflow-hidden rounded-3xl border border-line bg-steel/40 p-6 sm:p-8">

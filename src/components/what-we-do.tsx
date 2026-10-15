@@ -16,8 +16,8 @@ export function WhatWeDo() {
         <SectionHeading
           id="work-heading"
           eyebrow="What we do"
-          title="From spark to shipped product."
-          description="We are a studio that builds its own apps. Strategy, design, engineering, and iteration live in one place—because the product is the work."
+          title="Your business. Built for the web."
+          description="From a first website to a fresh start, we bring design, development, and ongoing care together."
         />
 
         <ul className="mt-14 grid gap-4 sm:grid-cols-2">

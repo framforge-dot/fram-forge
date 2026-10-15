@@ -8,9 +8,9 @@
 export const site = {
   name: "Fram Forge",
   legalName: "Fram Forge LLC",
-  tagline: "We forge apps worth using.",
+  tagline: "Websites built for your next chapter.",
   description:
-    "Fram Forge LLC is an independent app studio that designs, builds, and brings thoughtful digital products to life.",
+    "Custom websites for businesses ready to grow. We design, build, and launch your site, then keep it moving with ongoing support.",
   /** REPLACE: public contact email */
   email: "hello@framforge.com",
   /** REPLACE: production site URL used for metadata */
@@ -20,9 +20,10 @@ export const site = {
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "Apps", href: "/#apps" },
+  { label: "Services", href: "/#work" },
+  { label: "How it works", href: "/#pricing" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "My account", href: "/billing" },
 ] as const;
 
 export const legal = [
@@ -31,32 +32,24 @@ export const legal = [
 ] as const;
 
 /** Last updated date shown on legal pages. */
-export const legalUpdated = "August 14, 2026";
+export const legalUpdated = "October 14, 2026";
 
 export const capabilities = [
   {
-    number: "01",
-    title: "Product Strategy",
-    description:
-      "Every product starts with a sharp problem and a point of view. We decide who it is for, what it will refuse to do, and why it deserves to exist before a single screen is drawn.",
+    number: "01", title: "A plan for your business",
+    description: "We start with what you do, who you serve, and what your website needs to achieve. You get a clear scope and a custom quote before work begins.",
   },
   {
-    number: "02",
-    title: "App Design",
-    description:
-      "Interfaces that feel inevitable. We design for clarity, rhythm, and a little delight so each product looks considered and works the way people expect.",
+    number: "02", title: "Design that feels like you",
+    description: "A thoughtful, mobile-friendly website shaped around your brand, with clear navigation and a straightforward path for visitors to get in touch.",
   },
   {
-    number: "03",
-    title: "Development & Launch",
-    description:
-      "We build the real thing: native-quality web and mobile experiences, then ship them. Launch is a milestone in the life of a product, not the finish line.",
+    number: "03", title: "Built and ready to launch",
+    description: "We bring the design to life, check it across screen sizes, and help get your business online. One point of contact from the first conversation to launch.",
   },
   {
-    number: "04",
-    title: "Ongoing Product Improvement",
-    description:
-      "After release we stay close. We watch how people actually use what we made, tighten the edges, and keep forging the next version.",
+    number: "04", title: "Support beyond launch",
+    description: "Keep a developer in your corner. A monthly retainer covers the maintenance and updates agreed in your proposal, with predictable recurring billing.",
   },
 ] as const;
 
@@ -79,11 +72,11 @@ export type AppProduct = {
 export const apps: AppProduct[] = [];
 
 export const processSteps = [
-  "Idea",
-  "Design",
-  "Build",
-  "Launch",
-  "Improve",
+  "Tell us about your business",
+  "Review your custom proposal",
+  "Design & build",
+  "Launch your website",
+  "Ongoing care & support",
 ] as const;
 
 /** Add social profile URLs here when they are ready to show. */

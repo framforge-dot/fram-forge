@@ -16,8 +16,8 @@ export function Contact() {
           <SectionHeading
             id="contact-heading"
             eyebrow="Contact"
-            title="Say hello."
-            description="Questions, ideas, or just a note. We read everything that lands in the studio inbox."
+            title="Let’s talk about your website."
+            description="Tell us about your business, what you need, and when you would like to launch. We’ll follow up with next steps and a quote tailored to your project."
           />
           <a
             href={`mailto:${site.email}`}

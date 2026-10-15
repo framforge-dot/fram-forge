@@ -18,7 +18,7 @@ export function Hero() {
       <Container className="relative grid min-h-[calc(100vh-4.25rem)] items-center gap-14 py-20 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-8">
         <div>
           <p className="animate-fade-up font-mono text-[0.7rem] font-medium uppercase tracking-[0.22em] text-mist">
-            Independent app studio
+            Web design & ongoing support
           </p>
           <h1
             id="hero-heading"
@@ -30,12 +30,12 @@ export function Hero() {
             {site.description}
           </p>
           <div className="animate-fade-up delay-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <ButtonLink href="/#apps">
-              Explore our apps
+            <ButtonLink href="/#contact">
+              Let’s build your website
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
-            <ButtonLink href="/#contact" variant="secondary">
-              Get in touch
+            <ButtonLink href="/#pricing" variant="secondary">
+              How it works
             </ButtonLink>
           </div>
         </div>

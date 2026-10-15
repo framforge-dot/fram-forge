@@ -67,7 +67,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <ButtonLink href="/#contact" className="px-4 py-2 text-[0.8rem]">
-            Get in touch
+            Start a project
           </ButtonLink>
         </nav>
 
@@ -100,7 +100,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <ButtonLink href="/#contact" className="mt-3" onClick={() => setOpen(false)}>
-            Get in touch
+            Start a project
           </ButtonLink>
         </Container>
       </div>
