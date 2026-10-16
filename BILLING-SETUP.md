@@ -18,16 +18,16 @@ Restricted key permissions: Customers, Checkout Sessions, Customer Portal write;
 - 16 automated tests passed. Production build, TypeScript, lint, and HTTP configuration-gate checks passed.
 - Read-only tax review: active Stripe Tax settings and Pennsylvania registration. Tax collection behavior has not been changed or calculation-tested.
 
-## Needed before deployment
+## Production verification and remaining testing
 
 1. **Resolved:** the project is now available at `https://vercel.com/fram3/fram-forge`. Its production domain is `www.framforge.com`, and its connected repository is `framforge-dot/fram-forge`. The transfer was verified in the Vercel dashboard.
-2. Verify live sign-in and SSL issuance. Clerk production credentials, DNS, verified email login, and deletion settings are configured.
+2. **Verified:** Vercel deployed commit `c4148b1` with Ready status at www.framforge.com. Live sign-in renders as Fram Forge; signed-out /billing redirects to sign-in. Clerk reports all DNS records verified and SSL certificates issued.
 3. Validate the restricted Stripe key against the deployed billing flow.
-4. A Stripe sandbox connection for checkout, failure, renewal, and cancellation testing. Only the live account is currently connected.
-5. Production webhook and signing secret configured; signed delivery testing remains.
+4. Sandbox `acct_1U6BfjRz80GGH3JN` is accessible in the Stripe dashboard. Approval requested to save its existing test key locally for checkout, failure, renewal, and cancellation testing.
+5. Production webhook and signing secret configured. Live endpoint correctly returns 400 for an unsigned request; signed delivery testing remains.
 6. Review product tax classification and inclusive/exclusive pricing before activating automatic tax.
 
-Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Deployment verification is pending. No real payment has been made.
+Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Production deployment and public login verification passed. Full authenticated checkout, renewal, and cancellation testing remains. No real payment has been made. No client offers have been activated.
 
 ## Automatic provisioning blocker
 
