@@ -27,7 +27,7 @@ Restricted key permissions: Customers, Checkout Sessions, Customer Portal write;
 5. Production webhook and signing secret configured. Live endpoint correctly returns 400 for an unsigned request; signed delivery testing remains.
 6. Review product tax classification and inclusive/exclusive pricing before activating automatic tax.
 
-Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Production deployment and public login verification passed. Stripe checkout, renewal, and cancellation testing passed. Full authenticated website account testing remains: user reports trouble signing in. No real payment has been made. No client offers have been activated.
+Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Production deployment and public login verification passed. Stripe checkout, renewal, and cancellation testing passed. Production email/password registration and authenticated billing dashboard verified on October 16. The new account correctly shows no subscriptions and no proposals. Full authenticated checkout with an assigned proposal has not been exercised in production. No real payment has been made. No client offers have been activated.
 
 ## Automatic provisioning blocker
 
@@ -56,4 +56,4 @@ Projects sign-in is separate from the connected Stripe agent plugin. No Projects
 
 ## Login correction — October 16, 2026
 
-Google OAuth was enabled in production without a client ID or secret. Clicking it reproduced Google Error 400 (missing client_id). Disabled this incomplete connection in Clerk; the live sign-up form now offers email and password with email verification. User account creation and authenticated dashboard verification remain pending.
+Google OAuth was enabled in production without a client ID or secret. Clicking it reproduced Google Error 400 (missing client_id). Disabled this incomplete connection in Clerk; the live sign-up form now offers email and password with email verification. User completed account creation and email verification. The production /billing page loads the signed-in account, with the expected empty subscription/proposal state.
