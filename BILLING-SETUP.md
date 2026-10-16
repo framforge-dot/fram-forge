@@ -23,11 +23,11 @@ Restricted key permissions: Customers, Checkout Sessions, Customer Portal write;
 1. **Resolved:** the project is now available at `https://vercel.com/fram3/fram-forge`. Its production domain is `www.framforge.com`, and its connected repository is `framforge-dot/fram-forge`. The transfer was verified in the Vercel dashboard.
 2. **Verified:** Vercel deployed commit `c4148b1` with Ready status at www.framforge.com. Live sign-in renders as Fram Forge; signed-out /billing redirects to sign-in. Clerk reports all DNS records verified and SSL certificates issued.
 3. Validate the restricted Stripe key against the deployed billing flow.
-4. Sandbox `acct_1U6BfjRz80GGH3JN` is accessible in the Stripe dashboard. Approval requested to save its existing test key locally for checkout, failure, renewal, and cancellation testing.
+4. Sandbox `acct_1U6BfjRz80GGH3JN` is accessible in the Stripe dashboard. Existing sandbox key saved in ignored local .env.local with user approval. Service-layer checkout and portal functions passed real sandbox API/browser testing: declined card; $1,050 initial payment; $50 renewal; reused open checkout; completed checkout rejected; portal cancellation at paid-through date; subscription ended with no additional invoice. Local portal ID now belongs to this sandbox.
 5. Production webhook and signing secret configured. Live endpoint correctly returns 400 for an unsigned request; signed delivery testing remains.
 6. Review product tax classification and inclusive/exclusive pricing before activating automatic tax.
 
-Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Production deployment and public login verification passed. Full authenticated checkout, renewal, and cancellation testing remains. No real payment has been made. No client offers have been activated.
+Keep keys in local `.env.local` or Vercel's environment-variable fields, not chat or git. Run `npm run billing:check` after configuration; it reports names and status without printing secrets. Production deployment and public login verification passed. Stripe checkout, renewal, and cancellation testing passed. Full authenticated website account testing remains: user reports trouble signing in. No real payment has been made. No client offers have been activated.
 
 ## Automatic provisioning blocker
 
@@ -46,3 +46,14 @@ The CLI downloaded and verified for this session is `/tmp/framforge-stripe-cli/s
 ```
 
 Projects sign-in is separate from the connected Stripe agent plugin. No Projects service has been provisioned.
+
+## Sandbox verification evidence
+
+- Subscription: `sub_1UR1WuRz80GGH3JN2hiF8I5p` in sandbox `acct_1U6BfjRz80GGH3JN`.
+- Initial invoice paid: 105000 cents. Renewal invoice paid: 5000 cents. Test clock advanced through cancellation; two invoices total.
+- Real sandbox cancellation event passed the webhook handler with a locally generated test signature, including duplicate delivery; altered payload rejected with 400. This does not verify production webhook delivery or Clerk reverse-mapping integration.
+- No real payments were made. Production still has no client offers.
+
+## Login correction — October 16, 2026
+
+Google OAuth was enabled in production without a client ID or secret. Clicking it reproduced Google Error 400 (missing client_id). Disabled this incomplete connection in Clerk; the live sign-up form now offers email and password with email verification. User account creation and authenticated dashboard verification remain pending.
