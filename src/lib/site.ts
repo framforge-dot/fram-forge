@@ -21,9 +21,8 @@ export const site = {
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#work" },
-  { label: "How it works", href: "/#pricing" },
+  { label: "Our work", href: "/#portfolio" },
   { label: "About", href: "/#about" },
-  { label: "My account", href: "/billing" },
 ] as const;
 
 export const legal = [
@@ -32,7 +31,7 @@ export const legal = [
 ] as const;
 
 /** Last updated date shown on legal pages. */
-export const legalUpdated = "October 14, 2026";
+export const legalUpdated = "October 16, 2026";
 
 export const capabilities = [
   {
@@ -49,7 +48,7 @@ export const capabilities = [
   },
   {
     number: "04", title: "Support beyond launch",
-    description: "Keep a developer in your corner. A monthly retainer covers the maintenance and updates agreed in your proposal, with predictable recurring billing.",
+    description: "Keep a developer in your corner. A monthly retainer covers the maintenance and updates agreed in your proposal, with a clear scope and a direct point of contact.",
   },
 ] as const;
 
@@ -81,3 +80,13 @@ export const processSteps = [
 
 /** Add social profile URLs here when they are ready to show. */
 export const social: { label: string; href: string }[] = [];
+
+/** Add another project here with a screenshot in public/portfolio. */
+export const projects = [{
+  name: "Bound by Blood",
+  category: "Tattoo studio · Washington, PA",
+  description: "A bold website that puts the artists and their work first. Portfolio galleries, a look inside the studio, and clear ways to find the shop and get in touch.",
+  href: "https://www.boundbybloodtattoo.com",
+  image: "/portfolio/bound-by-blood.png",
+  tags: ["Web design", "Development", "Mobile-friendly"],
+}];

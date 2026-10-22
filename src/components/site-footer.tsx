@@ -14,7 +14,7 @@ export function SiteFooter() {
           </p>
         </div>
         <ul className="flex flex-wrap gap-x-6 gap-y-2">
-          {[{ label: "My account", href: "/billing" }, ...legal].map((item) => (
+          {legal.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}

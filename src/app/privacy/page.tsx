@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         <ul>
           <li>
             <strong className="text-paper">Information you send us.</strong> If
-            you contact us by email or through the form on this site, we receive
+            you contact us by email, we receive
             your name, email address, and the content of your message.
           </li>
           <li>
@@ -50,40 +50,10 @@ export default function PrivacyPage() {
             diagnose the site.
           </li>
         </ul>
-        <p>
-          You must create an account and verify your email to view your proposal
-          and pay. Clerk manages registration, authentication, and account
-          security. Payment details
-          are collected on Stripe’s hosted checkout and customer portal. We do
-          not receive or store your full card number on this website.
-        </p>
       </LegalSection>
 
-      <LegalSection title="Client accounts">
-        <p>
-          Clerk processes account information, including your email address,
-          credentials, verification activity, and session data. We use your
-          verified email to assign proposals and your account ID to connect
-          your billing records. We do not store your password ourselves. See{' '}
-          <a href="https://clerk.com/legal/privacy">Clerk’s privacy policy</a>.
-          Authentication uses cookies and similar technologies to keep you signed in.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="Payments and proposal links">
-        <p>
-          Stripe processes payment and billing information, including your contact
-          details and payment method. We can access billing records such as your
-          name, email, payment status, invoices, and subscription details through
-          Stripe to provide services and handle billing questions. See{' '}
-          <a href="https://stripe.com/privacy">Stripe’s privacy policy</a> for
-          information about its processing.
-        </p>
-        <p>
-          Client proposals require sign-in and a verified email matching the
-          recipient. Your billing account is linked to your user ID so other
-          clients cannot access your subscription through your proposal link.
-        </p>
+      <LegalSection title="Project payments">
+        <p>This is an informational website; it does not offer client accounts or collect payment details. If you become a client, we may send you a separate Stripe payment link. Stripe processes those payments under its own <a href="https://stripe.com/privacy">privacy policy</a>.</p>
       </LegalSection>
 
       <LegalSection title="How we use information">

@@ -34,8 +34,8 @@ export function Hero() {
               Let’s build your website
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
-            <ButtonLink href="/#pricing" variant="secondary">
-              How it works
+            <ButtonLink href="/#portfolio" variant="secondary">
+              Explore our work
             </ButtonLink>
           </div>
         </div>
