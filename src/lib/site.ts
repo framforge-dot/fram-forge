@@ -12,7 +12,7 @@ export const site = {
   description:
     "Custom websites for businesses ready to grow. We design, build, and launch your site, then keep it moving with ongoing support.",
   /** REPLACE: public contact email */
-  email: "hello@framforge.com",
+  email: "framforge@gmail.com",
   /** REPLACE: production site URL used for metadata */
   url: "https://framforge.com",
   year: 2026,
